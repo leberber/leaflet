@@ -1,0 +1,37 @@
+
+:root {
+    --marker-border: red;
+    --marker-border-width:1px;
+    --marker-background-color:white;
+  }
+
+.map-marker-style{
+    background-color: var(--marker-background-color) !important;
+    width:fit-content !important;
+    height:fit-content !important;
+    padding: 3px;
+    border-radius: 5px;
+    border: var( --marker-border-width) solid var(--marker-border) !important
+}
+
+.map-marker-style::after {
+    content: '';
+    position: absolute;
+    top: 99%;
+    left: calc(50% - 4px);
+    background: var( --marker-background-color);
+    width: 8px;
+    height: 8px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+  
+  .map-marker-style::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 5px);
+    background: var( --marker-border);
+    width: 10px;
+    height: 9px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
