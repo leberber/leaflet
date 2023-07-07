@@ -1,0 +1,13 @@
+
+:root {
+    --shift-x: 0.25em
+}
+  .chart-number {
+    font-size: 0.6em;
+    line-height: 1.5;
+    text-anchor: middle;
+    -moz-transform: translateY(var(--shift-x));
+    -ms-transform: translateY(var(--shift-x));
+    -webkit-transform: translateY(var(--shift-x));
+    transform: translateY(var(--shift-x));
+} 
